@@ -9,6 +9,6 @@ import lombok.*;
 @Getter
 public class Mammal extends Animal {
 
-    private String name;
+    private boolean isHuman;
 
 }

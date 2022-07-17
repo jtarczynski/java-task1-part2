@@ -6,14 +6,18 @@ import lombok.NoArgsConstructor;
 public class Display {
 
     public <T extends Animal> void displayDataX(Container<T> container) {
-        System.out.println(container.getT().toString());
+        container.getT().forEach(System.out::println);
     }
 
     public <T extends Animal> void displayDataY(Container<T> container) {
-        System.out.println(container.getT().toString());
+//        displayDataX(container);
+//        System.out.println(container.getT().isHuman());
     }
 
     public <T extends Animal> void displayDataZ(Container<T> container) {
-        System.out.println(container.getT().toString());
+//        T t = container.getT();
+//        displayDataY(container);
+//        System.out.println(t.getAge());
+//        System.out.println(t.getName());
     }
 }

@@ -2,25 +2,22 @@ package org.example;
 
 import org.example.models.*;
 
-/**
- * Hello world!
- *
- */
+import java.util.List;
+
 public class Main {
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
 
-        Container<Animal> animalContainer = new Container<>(new Animal(1234L));
-
-        Container<Mammal> mammalContainer = new Container<>(new Mammal("cos"));
-
-        Container<Dog> dogContainer = new Container<>(new Dog("Burek", 12));
+        Container<Animal> animalContainer = new Container<>(
+                List.of(new Animal(1234L),
+                        new Dog("Burek", 10),
+                        new Mammal(false)));
 
         Display display = new Display();
 
         display.displayDataX(animalContainer);
 
-        display.displayDataY(mammalContainer);
-
-        display.displayDataZ(dogContainer);
+//        display.displayDataY(mammalContainer);
+//
+//        display.displayDataZ(dogContainer);
     }
 }
